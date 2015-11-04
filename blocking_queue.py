@@ -1,5 +1,6 @@
 #special purpose blocking_queue that takes threshold number
 #of elements, and won't allow a dequeue in any other size
+#by Sam Findler
 
 from threading import Lock
 
