@@ -16,6 +16,7 @@ def grab_some_data(emokit,blocking_queue,file):
   "get data for 10 iterations than close the headset"
   i = 0
   while(i < 10):
+    #run ~10 seconds of gets from the blocking_queue
     file.write(blocking_queue.get()[0] + "\n")
     i = i+1
   emokit.doorway=false
