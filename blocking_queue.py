@@ -1,3 +1,6 @@
+#special purpose blocking_queue that takes threshold number
+#of elements, and won't allow a dequeue in any other size
+
 from threading import Lock
 
 class blocking_queue:
