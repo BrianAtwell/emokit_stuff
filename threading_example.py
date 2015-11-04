@@ -2,7 +2,9 @@
 #a threaded environment
 
 #it also demonstrates the way that because of the 'threshold'
-#many data points will be lost in a continuous data set.
+#some data points will be lost in a more or less continuous data set.
+#by Sam Findler
+
 
 
 import threading
