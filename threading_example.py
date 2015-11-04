@@ -1,6 +1,5 @@
 #this example demonstrates how to use the blocking_queue in
 #a threaded environment
-
 #it also demonstrates the way that because of the 'threshold'
 #some data points will be lost in a more or less continuous data set.
 #by Sam Findler
