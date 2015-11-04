@@ -1,6 +1,6 @@
 #Main class to be used on the input thread
 #gets data and passes it to a blocking_queue
-#by Sam Findler
+#adapted from emokit's example.py by Sam Findler
 
 from emokit.emotiv import Emotiv
 if platform.system() == "Windows":
