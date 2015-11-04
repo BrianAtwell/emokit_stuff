@@ -5,7 +5,7 @@ Mainly stuff to get data to train neural networks and stuff to use that data and
 
 Installing emokit on windows (not fully tested):
 
-  1. install python, pip
+  1. install python, pip, visual C++
   2. use pip to install pywinusb, pycrypto and gevent 
   3. may need to pip install socket as well
   4. Donwload the repo from openyou/emokit (the other ones don't seem to work on windows, there are some slight code changes)
