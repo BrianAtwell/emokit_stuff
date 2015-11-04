@@ -25,7 +25,7 @@ class emokit_interaction:
     
   def close(self):
     "call this when done with the headset"
-    this.headset.close()
+    self.headset.close()
     return
     
   def runForever(self,blocking_queue):
