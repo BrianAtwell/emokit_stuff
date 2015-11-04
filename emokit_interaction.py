@@ -10,6 +10,7 @@ import gevent
 class emokit_interaction:
   "class to use the emokit"
   headset = Emotiv()
+  doorway = true
   
   def initialize(self):
     "to be called before using the Emotiv"
@@ -30,8 +31,7 @@ class emokit_interaction:
     
   def runForever(self,blocking_queue):
     "run until a keyboard interrupt causes it to stop"
-    try:
-      while True:
+    while doorway:
         self.queueData(blocking_queue)
-    except KeyboardInterrupt:
-        self.close()
+    self.close()
+    return
