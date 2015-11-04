@@ -2,6 +2,7 @@
 #users base-line values.  It takes about a second.
 #it is stored in the data item base_lines.base_lines
 #also contains utilities to save and load the base_lines from a file
+#as well as a function to calculate deviation from baseline called "calculate_deviation(sensor, value)"
 
 class base_lines:
   base_lines #a dictionary containing the base_line readings
@@ -57,7 +58,7 @@ class base_lines:
     #put them into a dictionary where the key = name of sensor
     self.base_lines = {'F7' : F7, 'FC5' : FC5, 'F3' : F3, 'AF3' : AF3, 'F4' : F4, 'FC6' : FC6, 'F8' : F8, 'T7' : T7, 'T8' : T8, 'P7' : P7, 'O1' : O1, 'O2' : O2}
     
-  save_base_lines(filename):
+  def save_base_lines(self, filename):
     "open filename and save the base_line_readings there"
     file = open(filename,'w')
     file.write(self.base_lines['F7'] + '\n')
@@ -75,7 +76,7 @@ class base_lines:
     file.write(self.base_lines['O2'] + '\n')
     file.close()
   
-  read_base_lines(filename):
+  def read_base_lines(self, filename):
     "open filename and get the baseline readings from there"
     file = open(filename,'r')
     F7 = int(file.readline())
@@ -93,3 +94,6 @@ class base_lines:
     O2 = int(file.readline())
     self.base_lines = {'F7' : F7, 'FC5' : FC5, 'F3' : F3, 'AF3' : AF3, 'F4' : F4, 'FC6' : FC6, 'F8' : F8, 'T7' : T7, 'T8' : T8, 'P7' : P7, 'O1' : O1, 'O2' : O2}
     file.close()
+  
+  def calculate_deviation(self, sensor, value):
+    return math.fabs(self.base_lines[sensor] - value)
