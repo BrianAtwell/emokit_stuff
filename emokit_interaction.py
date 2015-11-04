@@ -20,7 +20,7 @@ class emokit_interaction:
   def queueData(self,blocking_queue):
     "put current data packet into blocking_queue"
     packet = this.headset.dequeue()
-    blocking_queue.put(packet())
+    blocking_queue.put(packet)
     return
     
   def close(self):
