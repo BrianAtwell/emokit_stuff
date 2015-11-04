@@ -15,7 +15,7 @@ class emokit_interaction:
   def initialize(self):
     "to be called before using the Emotiv"
     gevent.spawn(this.headset.setup)
-    gevent.sleep(0)
+    gevent.sleep(100)
     return
     
   def queueData(self,blocking_queue):
