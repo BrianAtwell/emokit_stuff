@@ -7,6 +7,7 @@ Installing emokit on windows (not fully tested):
 
   1. install python, pip
   2. use pip to install pywinhid, pycrypto and gevent 
-  3. Donwload the repo from openyou/emokit
-  4. cd into emokit/python and run "python setup.py"
-  5. run "python example.py" with the device plugged in to insure that it works 
+  3. may need to pip install socket as well
+  4. Donwload the repo from openyou/emokit
+  5. cd into emokit/python and run "python setup.py"
+  6. run "python example.py" with the device plugged in to insure that it works 
