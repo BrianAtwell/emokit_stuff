@@ -20,6 +20,7 @@ def grab_some_data(emokit,blocking_queue,file):
     file.write(blocking_queue.get()[0] + "\n")
     i = i+1
   emokit.doorway=false
+  f.close()
   
 f = open('temp_data.txt','w')
 
